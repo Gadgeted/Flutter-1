@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:hello/calculator/calculator.dart';
-import 'package:hello/profile/stateful.dart'; // importing profile
+import 'package:hello/messages/messages.dart';
 
 void main() {
   // the main function
   runApp(const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Hello Flutter',
-      home: Calculator()));
+      home: Messages()));
 }
 
 // Creating Our first Widget.

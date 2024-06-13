@@ -19,10 +19,14 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(
-          Icons.arrow_back,
-          color: Colors.white,
-        ),
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(
+              Icons.arrow_back,
+              color: Colors.white,
+            )),
         title: const Text(
           "My profile",
           style: TextStyle(color: Colors.white),
@@ -161,7 +165,7 @@ class _ProfileState extends State<Profile> {
                     fav--;
                     setState(() {});
                   },
-                  child: Text("Rate This Application")),
+                  child: const Text("Rate This Application")),
               Row(
                 children: [
                   Icon(fav > 1 ? Icons.star : Icons.star_border),
